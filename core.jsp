@@ -40,5 +40,25 @@
         You salary is bad
     </core:otherwise>
 </core:choose>
+
+<%--<core:import var="data" url="home"/>--%>
+<%--<core:out value="${data}"/>--%>
+
+<core:forEach var="i" begin="0" end="5">
+    i=<core:out value="${i}"/>
+</core:forEach>
+
+<core:forTokens var="name" items="Test1;Test2;Test4" delims=";">
+    <core:out value="${name}"/>
+</core:forTokens>
+<br>
+<core:url value="core.jsp" var="urltest">
+    <core:param name="test" value="123"/>
+    <core:param name="phone" value="702"/>
+</core:url>
+<%--<core:import url="${urltest}"/>--%>
+
+<%--<core:redirect url="signin.jsp"/>--%>
+ <a href = "<core:url value = "signin.jsp"/>">TEST</a>
 </body>
 </html>
